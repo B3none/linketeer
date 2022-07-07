@@ -1,0 +1,12 @@
+{
+  "name": "linketeer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "puppeteer": "^15.3.1"
+  }
+}
