@@ -12,7 +12,7 @@ const goToInvitationManagerPage = async (page) => {
   await page.goto("https://www.linkedin.com/mynetwork/invitation-manager/");
 
   // Wait for invitation manager page to be loaded
-  await page.waitForSelector(selectors.SELECTOR_INVITATION_MANAGER_TITLE);
+  await page.waitForSelector(selectors.INVITATION_MANAGER_TITLE);
 };
 
 const acceptAllInvitations = async (page) => {
