@@ -1,6 +1,6 @@
-const setup = require("./setup");
-const signIn = require("./sign-in");
-const setSelectors = require("./utils/set-selectors");
+import setup from "./setup";
+import signIn from "./sign-in";
+import setSelectors from "./utils/set-selectors";
 
 const selectors = {
   BUTTON_SEE_ALL_SOFTWARE_ENGINEERS:
@@ -21,7 +21,7 @@ const seeAllSoftwareEngineers = async (page) => {
 
 const addSoftwareEngineers = async (page) => {
   await page.evaluate(() => {
-    const buttons = document.querySelectorAll(window.BUTTON_CONNECT_MODAL);
+    const buttons = document.querySelectorAll(window["BUTTON_CONNECT_MODAL"]);
     buttons.forEach((button) => button.click());
   });
 };

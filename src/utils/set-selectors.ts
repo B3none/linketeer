@@ -1,4 +1,4 @@
-const windowSet = require("./window-set");
+import windowSet from "./window-set";
 
 const setSelectors = (page, selectors) => {
   Object.entries(selectors).forEach(([key, value]) =>
@@ -6,4 +6,4 @@ const setSelectors = (page, selectors) => {
   );
 };
 
-module.exports = setSelectors;
+export default setSelectors;

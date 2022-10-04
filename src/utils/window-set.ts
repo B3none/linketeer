@@ -7,4 +7,4 @@ const windowSet = (page, name, value) =>
     })
   `);
 
-module.exports = windowSet;
+export default windowSet;

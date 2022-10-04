@@ -1,5 +1,5 @@
-const puppeteer = require("puppeteer");
-const windowSet = require("./utils/window-set");
+import puppeteer from "puppeteer";
+import windowSet from "./utils/window-set";
 require("dotenv").config();
 
 const setup = async () => {
@@ -12,4 +12,4 @@ const setup = async () => {
   return { browser, page };
 };
 
-module.exports = setup;
+export default setup;

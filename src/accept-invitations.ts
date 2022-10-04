@@ -1,6 +1,6 @@
-const setup = require("./setup");
-const signIn = require("./sign-in");
-const setSelectors = require("./utils/set-selectors");
+import setup from "./setup";
+import signIn from "./sign-in";
+import setSelectors from "./utils/set-selectors";
 
 const selectors = {
   INVITATION_MANAGER_TITLE: ".mn-invitation-manager__header",
@@ -12,12 +12,14 @@ const goToInvitationManagerPage = async (page) => {
   await page.goto("https://www.linkedin.com/mynetwork/invitation-manager/");
 
   // Wait for invitation manager page to be loaded
-  await page.waitForSelector(selectors.INVITATION_MANAGER_TITLE);
+  await page.waitForSelector(selectors["INVITATION_MANAGER_TITLE"]);
 };
 
 const acceptAllInvitations = async (page) => {
   await page.evaluate(() => {
-    const buttons = document.querySelectorAll(window.BUTTON_ACCEPT_INVITATION);
+    const buttons = document.querySelectorAll(
+      window["BUTTON_ACCEPT_INVITATION"]
+    );
     buttons.forEach((button) => button.click());
   });
 };
